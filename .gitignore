@@ -1,0 +1,4 @@
+/opt/inspircd/run/conf/modules/*.conf
+/opt/inspircd/run/conf/txt/*.txt
+/opt/inspircd/run/conf/*.conf
+/opt/inspircd/run/tls/**
