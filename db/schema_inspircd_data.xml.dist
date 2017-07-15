@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dbsteward>
+  <schema name="inspircd" owner="ROLE_OWNER">
+    <!-- Users -->
+    <table name="users" primaryKey="username" owner="ROLE_OWNER">
+      <rows columns="username, password, enabled">
+        <row>
+          <col> A username used to authenticate the user, think posix name.  e.g. user </col>
+          <col> SHA-256 of the user's password, including any pre-defined salt </col>
+          <col> true = enabled, false = disabled </col>
+        </row>
+      </rows>
+    </table>
+    <!-- Ops -->
+    <table name="opers" primaryKey="id" owner="ROLE_OWNER">
+      <rows columns="id, username, password, hostname, type">
+        <row>
+          <col>Integer value defining this operator's index.  e.g. 1 </col>
+          <col> Operator's username.  e.g. myoper </col>
+          <col> SHA-256 of the oper's password, including any pre-defined salt </col>
+          <col>
+            Space separated list of hostnames / network segments this operator is allowed to 
+            access the server from.  e.g.  127.0.0.1 192.168.1.0/24
+          </col>
+          <col> Operator type as defined in opers.conf.  e.g. foo </col>
+        </row>
+      </rows>
+    </table>
+  </schema>
+</dbsteward>
