@@ -1,0 +1,15 @@
+<dbsteward>
+  <includeFile name="schema_public.xml"/>
+  <includeFile name="schema_inspircd.xml"/>
+  <!-- Omitted from repo, create schema_inspircd_data based on provided docs -->
+  <includeFile name="schema_inspircd_data.xml"/>
+  <database>
+    <role>
+      <application>irc_thewildstoat_com</application>
+      <owner>irc_owner</owner>
+      <replication>irc_owner</replication>
+      <readonly>irc_owner</readonly>
+      <customRole>irc_owner,irc_reader,irc_writer</customRole>
+    </role>
+  </database>
+</dbsteward>

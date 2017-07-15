@@ -1,0 +1,13 @@
+<dbsteward>
+  <schema name="public" owner="ROLE_OWNER">
+    <!-- Note: this definition is hard-coded in the m_sqlopers module -->
+    <view name="ircd_opers" owner="ROLE_OWNER">
+      <viewQuery>SELECT * FROM inspircd.opers</viewQuery>
+      <grant operation="INSERT, SELECT, UPDATE, DELETE" role="irc_owner"/>
+      <grant operation="SELECT" role="irc_reader"/>
+    </view>
+    <grant operation="USAGE" role="irc_owner"/>
+    <grant operation="USAGE" role="irc_reader"/>
+    <grant operation="USAGE" role="irc_writer"/>
+  </schema>
+</dbsteward>
