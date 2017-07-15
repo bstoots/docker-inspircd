@@ -56,6 +56,8 @@ RUN mkdir /opt/inspircd/run/tls
 COPY opt/inspircd/run/tls/self.crt.pem /opt/inspircd/run/tls/fullchain.pem
 COPY opt/inspircd/run/tls/self.key.pem /opt/inspircd/run/tls/privkey.pem
 
+# Setup volume mount to bring in real configs
+VOLUME ["/opt/inspircd/run/conf"]
 # Setup volume mount to bring in real certificates
 VOLUME ["/opt/inspircd/run/tls"]
 
