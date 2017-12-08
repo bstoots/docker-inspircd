@@ -4,6 +4,7 @@ MAINTAINER Brian Stoots <bstoots@gmail.com>
 # Install required packages
 RUN apt-get update && apt-get upgrade -y && apt-get install -y \
   build-essential \
+  gettext \
   gnutls-bin gnutls-dev \
   libpcre3 libpcre3-dev \
   libpq-dev \
